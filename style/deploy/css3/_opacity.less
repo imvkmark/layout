@@ -1,0 +1,9 @@
+// 透明度, @opacity[0-100]
+.opacity(@opacity: 80) {
+	// 标准的属性
+	opacity: @opacity / 100;
+	// IE使用私有属性
+	filter: ~"alpha(opacity=@{opacity})";
+	// Moz + FF Moz Family
+	-moz-opacity:@opacity / 100;
+}

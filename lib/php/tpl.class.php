@@ -11,9 +11,8 @@ class tpl{
 	}
 
 	// parse Frame file
-	public function _parseFrame($frameFile)
+	private function _parseFrame($frameFile)
 	{
-		// {replace '__BLOCK__'}
 		$pattern = "/\{replace \'(.*?)\'\}/is";
 		$content = file_get_contents($frameFile);
 		preg_match_all($pattern, $content, $matches);
@@ -21,18 +20,23 @@ class tpl{
 			foreach ($matches[1] as $key => $value) {
 				// $value = 'BLOCK'
 				$valKey = 'tpl_'.strtolower($value);
-				if (isset($GLOBALS[$valKey])) {
-					$vars = explode(':', $GLOBALS['tpl_'.strtolower($value)]);
-					$str = "{template '{$vars[1]}', '{$vars[0]}'}";
-					$content = str_replace($matches[0][$key], $str, $content);
+				// reset global variable
+				$GLOBALS[$valKey] = isset($GLOBALS[$valKey]) ? $GLOBALS[$valKey] : '';
+				$vars = explode(':', $GLOBALS['tpl_'.strtolower($value)]);
+				if (count($vars) != 2) {
+					$this->_log('Un correct vars : ' . $value);
 				}
+				$str = $GLOBALS[$valKey] ? "{template '{$vars[1]}', '{$vars[0]}'}" : '';
+
+				$content = str_replace($matches[0][$key], $str, $content);
+					
 			}
 		}
 		return $content;
 	}
 
 	// parse insert block file
-	public function _parseTpl($tplStr)
+	private function _parseTpl($tplStr)
 	{
 		// {template 'header', 'common'}
 		$pattern = "/\{template \'(.*?)\', \'(.*?)\'\}/is";
@@ -65,6 +69,10 @@ class tpl{
 			echo $tplStr;
 		}
 		
+	}
+
+	private function _log($msg) {
+		exit($msg);
 	}
 
 }
