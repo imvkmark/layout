@@ -1,0 +1,19 @@
+// .layoutGen(960px, 30px, 10px, 20);
+.layoutGen(@projectWidth, @projectColumnWidth, @projectGutterWidth, @projectColumnNum){
+	.layout{
+		width: @projectWidth;
+		margin: 0 auto;
+		.spanX (@projectColumnNum);
+	}
+	// 生成 .span[1-xx]
+	.spanX (@index) when (@index > 0) {
+		(~".span@{index}") { .span(@index); }
+		.spanX(@index - 1);
+		
+	}
+	.spanX (0) {}
+	.span (@columns) {
+		width: (@projectColumnWidth * @columns) + (@projectGutterWidth * (@columns - 1));
+	}
+}
+

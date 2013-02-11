@@ -1,0 +1,24 @@
+/* Global 全局变量 */
+// @fontFamily : "PT Sans", "Helvetica Neue", Helvetica, Arial, '微软雅黑', '宋体';
+// @fontSize : 12px;
+// @fontColor: #000;
+// @linkColor: #666;
+// @linkHover: #ccc;
+.resetProjectFont(@fontFamily, @fontSize, @fontColor) {
+	body {
+		background  : #fff;
+		font-family : @fontFamily;
+		font-size   : @fontSize;
+		color       : @fontColor;
+	}
+}
+.resetProjectLink(@linkColor, @hoverColor) {
+	a{
+		color: @linkColor;
+		text-decoration: none;
+	}
+	a:hover{
+		color: @hoverColor;
+	}
+}
+
