@@ -21,3 +21,15 @@
 		color: @hoverColor;
 	}
 }
+.resetForm(@inputTextHeight, @inputTextPadding){
+	input[type=text]{
+		height: @inputTextHeight;
+		line-height: @inputTextHeight;
+		padding: @inputTextPadding;
+	}
+	select{
+		height: @inputTextHeight+@inputTextPadding*3;
+		line-height: @inputTextHeight;
+		padding: @inputTextPadding;
+	}
+}

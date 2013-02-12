@@ -1,7 +1,128 @@
 .resetBrowser();
 .resetProjectFont(@fontFamily, @fontSize, @fontColor);
 .resetProjectLink(@linkColor, @hoverColor);
-.layoutGen(980px, 30px, 10px, 20);
+.resetForm(16px, 3px);
+.layoutGen(980px, 20px, 10px, 20);
+.commonClassGen();
+.marginsGen(20);
 body{
 	background:#fff url(@bg_body) no-repeat center top;
+}
+.col-left{
+	width:275px;
+	float:left;
+	_display:inline;
+}
+.col-right{
+	width:695px;
+	float:right;
+	_display:inline;
+}
+.w340{
+	width:340px;
+}
+.infos{
+	h3{
+		height:30px;
+		line-height:30px;
+		padding-left:18px;
+		background:#e4f7fe;
+		color:#105687;
+		a{
+			font-size:12px;
+			font-weight:normal;
+			float:right;
+			padding-right:10px;
+			color:#0091d4;
+			&:hover{
+				color:darken(#0091d4, 20%);
+			}
+		}
+	}
+	.content{
+		border:1px solid #bad7e7;
+		border-top-width:2px;
+		padding:17px 23px;
+	}
+}
+.header{
+	.top{
+		height:24px;
+		line-height:24px;
+		text-align:right;
+		a{
+			display:inline-block;
+			padding:0 10px;
+			&:hover{
+				color:#000;
+			}
+		}
+		.login,.reg{
+			background-image:url(@bg_login_reg);
+			width:77px;
+			height:24px;
+			padding:0;
+		}
+		.login{
+			&:hover{
+				background-position:0 24px;
+			}
+		}
+		.reg{
+			background-position:77px 0;
+			&:hover{
+				background-position:77px 24px;
+			}
+		}
+	}
+	.webinfo{
+		height:89px;
+		.logo{
+			background-image:url(@bg_logo);
+			width:196px;
+			height:89px;
+			display:inline-block;
+			a{
+				display:block;
+				width:196px;
+				height:89px;
+			}
+		}
+		.tel400{
+			position:absolute;
+			top:50px;
+			left:235px;
+			font-size:18px;
+			font-weight:bold;
+			color:#1a5191;
+		}
+	}
+	.menu{
+		height:35px;
+		ul{
+			padding-top:3px;
+			font-size:14px;
+			font-weight:bold;
+			padding-left:35px;
+		}
+		li{
+			float:left;
+			&.active a{
+				background:#fff;
+				color:#0b74ad;
+			}
+		}
+		a{
+			display:inline-block;
+			padding:8px 20px 8px 20px;
+			height:16px;
+			color:#fff;
+			&:hover{
+				color:darken(#fff, 20%);
+			}
+		}
+	}
+}
+.banner{
+	margin-top:10px;
 }

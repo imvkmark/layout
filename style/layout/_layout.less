@@ -16,4 +16,39 @@
 		width: (@projectColumnWidth * @columns) + (@projectGutterWidth * (@columns - 1));
 	}
 }
+.commonClassGen(){
+	.pull-right{
+		float:right;
+	}
+	.pull-left{
+		float:left;
+	}
+	.clear{
+		clear:both;
+		height:0;
+		font-size:0;
+	}
+	.hideme{
+		visibility:hidden;
+	}
+}
+.marginsGen(@index){
+	// 生成 .mt[1-@index]
+	.marginX (@index) when (@index > 0) {
+		(~".mt@{index}") { .mt(@index); }
+		(~".mb@{index}") { .mb(@index); }
+		(~".ml@{index}") { .ml(@index); }
+		(~".mr@{index}") { .mr(@index); }
+		.marginX(@index - 1);
+		
+	}
 
+	.marginX (0) {}
+	.mt (@index) {margin-top: @index+0px;}
+	.mr (@index) {margin-right: @index+0px;}
+	.mb (@index) {margin-bottom: @index+0px;}
+	.ml (@index) {margin-left: @index+0px;}
+
+	.marginX(@index);
+
+}

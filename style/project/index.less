@@ -1,3 +1,86 @@
-.banner{
-	visibility:hidden;
+.idx-rlist{
+	li{
+		line-height:23px;
+		height:23px;
+		overflow:hidden;
+	}
+	span{
+		float:right;
+		font-weight:bold;
+		color:#ff6602;
+		padding-left:10px;
+	}
+	a{
+		color:#0091d2;
+		&:hover{
+			color:darken(#0091d2, 20%);
+		}
+	}
+}
+.idx-llist{
+	// fix 左右平等
+	margin-top:-2px;
+	li{
+		line-height:27px;
+		height:27px;
+		overflow:hidden;
+		border-bottom: 1px dashed #dfdfdf;
+	}
+	a{
+		color:#808080;
+		&:hover{
+			color:darken(#808080, 20%);
+		}
+	}
+}
+.idx-left{
+	.search{
+		background:#fff url(@bg_search) no-repeat 2px 2px;
+		height:260px;
+		overflow:hidden;
+		.block{
+			border:2px solid #78b0c7;
+			//padding:55px 16px 16px;
+			padding-top:56px;
+			height:200px;
+			font-size:14px;
+			tr{
+				height:25px;
+				th{
+					color:#0e578a;
+					text-align:right;
+					// padding:8px;
+					width:75px;
+				}
+				td{
+					padding-left:5px;
+				}
+			}
+			.btn_search{
+				background:#fff url(@bg_search_btn) no-repeat 0 0;
+				width:72px;
+				height:23px;
+				border:none;
+			}
+		}
+	}
+	.weibo{
+		.weibo_sina, 
+		.weibo_tencent{
+			background-image:url(@bg_weibo);
+			display:inline-block;
+			width:135px;
+			height:55px;
+			margin-top:3px;
+		}
+		.weibo_sina{
+			background-position:0 0;
+		}
+		.weibo_tencent{
+			background-position:138px 0;
+		}
+	}
+}
+.idx-right{
+	.ad{}
 }
