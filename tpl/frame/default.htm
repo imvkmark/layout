@@ -1,3 +1,11 @@
 {template 'header', 'common'}
-{replace 'block'}
+<div class="layout mt10">
+	<div class="col-left idx-left">
+		{template 'side', 'common'}
+	</div>
+	<div class="col-right">
+		{replace 'block'}
+	</div>
+	<div class="clear"></div>
+</div>
 {template 'footer', 'common'}

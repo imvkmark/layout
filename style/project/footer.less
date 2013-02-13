@@ -1,0 +1,91 @@
+.process{
+	background:#fff url(@bg_process) 0 0;
+	height:64px;
+	.select,
+	.book,
+	.order,
+	.pay, 
+	.notice,
+	.tour{
+		background-image:url(@bg_process);
+		display:block;
+		height:64px;
+		float:left;
+	}
+	.select{
+		background-position:0 0;
+		width:175px;
+	}
+	.book{
+		background-position:-175px 0;
+		width:159px;
+	}
+	.order{
+		background-position:-334px 0;
+		width:153px;
+	}
+	.pay{
+		background-position:-487px 0;
+		width:153px;
+	}
+	.notice{
+		background-position:-639px 0;
+		width:153px;
+	}
+	.tour{
+		background-position:-793px 0;
+		width:153px;
+	}
+}
+.footer{
+	background:#3bafd8;
+	color:#fff;
+	a{
+		color:#fff;
+		&:hover{
+			color:darken(#fff, 10%);
+		}
+	}
+	.help{
+		border-bottom:1px dashed #fff;
+		dl{
+			float:left;
+			width:163px;
+		}
+		dd, dt{
+			padding-left:30px;
+			margin:0;
+		}
+		dt{
+			margin:1em 0 ;
+			font-weight:bold;
+		}
+		dd{
+			a{
+				line-height:22px;
+				height:22px;
+				overflow:hidden;
+			}
+		}
+	}
+	.copyright{
+		padding-bottom:10px;
+		.copy{
+			padding-top:30px;
+			padding-bottom:30px;
+			a{
+				padding:0 10px;
+			}
+			p{
+				line-height:1.5em;
+			}
+			.info{
+				padding-left:10px;
+			}
+		}
+		.pay{
+			padding-top:15px;
+			text-align:right;
+		}
+	}
+}
