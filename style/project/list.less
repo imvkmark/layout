@@ -8,7 +8,7 @@
 			position: absolute;
 		}
 		dd{
-			padding-left:55px;
+			padding-left:60px;
 			margin-left: 0;
 			a{
 				display:inline-block;
@@ -29,6 +29,8 @@
 	.list-items{
 		table{
 			border-spacing: 0;
+			// fix ie 6 
+			border-collapse: collapse;
 			th{
 				height: 30px;
 				background:#e4f7fe;
@@ -59,6 +61,9 @@
 					height:40px;
 					line-height:40px;
 					border-bottom:1px dashed #ccc;
+				}
+				a{
+					display: inline-block;
 				}
 				.mark{
 					vertical-align:top;

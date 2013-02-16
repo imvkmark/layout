@@ -33,16 +33,12 @@
 		}
 	}
 }
-.idx-rlist-num{
+.idx-rlist-nonum{
+	padding-top: 7px;
 	li{
-		height:26px;
+		height: 23px;
+		line-height: 23px;
 		overflow:hidden;
-		line-height:26px;
-		// vertical-align:middle;
-		i{
-			vertical-align:middle;
-			padding-right:5px;
-		}
 	}
 	a{
 		color:#0091d2;
@@ -50,49 +46,42 @@
 			color:darken(#0091d2, 20%);
 		}
 	}
-	.active {
-		height:auto;
-		.single-line{
-			display:none;
-		}
-	}
-	span{
+	.price{
 		float:right;
 		font-weight:bold;
 		color:#ff6602;
 		padding-left:10px;
 	}
-	p{
-		height: 64px;
-		background: #eee;
-		img{
-			float:left;
-			margin-right:10px;
-		}
-		i{
-			vertical-align:top;
-			float:left;
-		}
+	.active{
+		height:60px;
+		background:#eee;
+		margin-bottom: 14px;
 		a{
-			height: 44px;
-			line-height:22px;
-			display: block;
 			vertical-align: top;
+			line-height: 20px;
+			display: block;
 		}
-		.prices{
-			display:block;
-			float:left;
-			padding-left:0;
-			margin-top: -5px;
-			span{
-				padding-left:0;
-				font-weight:normal;
-			}
-			.old_price{
-				padding-left:5px;
-				color:#666;
-			}
+		img{
+			float: left;
+			padding-right: 10px;
 		}
+		p{
+			margin:0;
+			font-weight: bold;
+		}
+		.old_price{
+			color:#666;
+			padding-right:10px;
+		}
+		.now_price{
+			color:#ff6602;
+		}
+	}
+}
+.idx-hasnum{
+	background: url(@bg_list) no-repeat 0 2px;
+	li{
+		margin-left: 18px;
 	}
 }
 .idx-left{
@@ -143,17 +132,21 @@
 		}
 	}
 	.video{
-		height:205px;
+		height:204px;
 		overflow:hidden;
+		_margin-bottom:16px;
 	}
 }
 .idx-right{
-	.ad{}
+	.ad{
+		_margin-top:-3px;
+	}
 	.help{
 		background: #fff url(@bg_help) 0 0;
 		.block{
 			// height:131px;
 			padding: 14px 40px 15px 120px;
+			_padding-bottom:12px;
 			border:1px solid #bad7e7;
 			height:100px;
 			a{
