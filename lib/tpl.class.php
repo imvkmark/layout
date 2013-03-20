@@ -1,11 +1,14 @@
 <?php 
-class tpl{
+class tpl
+{
 	private $_frameDir;
 	private $_tplDir;
 	private $_ext;
-	public function __construct()
+
+	public function __construct($project)
 	{
-		$this->_tplDir	 = ROOT_DIR . 'tpl' . DS;
+		$this->_tplDir	 = ROOT_DIR . 'tpl' . DS . $project .DS;
+		$this->_checkFileExist($this->_tplDir);
 		$this->_frameDir = $this->_tplDir . 'frame' . DS;
 		$this->_ext = '.htm';
 	}
@@ -62,13 +65,13 @@ class tpl{
 	}
 	public function display($frame = 'default')
 	{
+
 		$frameFile = $this->_frameDir . $frame . $this->_ext;
 		if ($this->_checkFileExist($frameFile)){
 			$frameStr = $this->_parseFrame($frameFile);
 			$tplStr = $this->_parseTpl($frameStr);
 			echo $tplStr;
 		}
-		
 	}
 
 	private function _log($msg) {
@@ -76,4 +79,3 @@ class tpl{
 	}
 
 }
-?>
