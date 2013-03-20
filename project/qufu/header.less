@@ -1,0 +1,32 @@
+.top{
+	.singleLineHeight(25px);
+	a{
+		padding:0 10px;
+		&:hover{
+			color:darken(#ccc, 30%);
+		}
+	}
+}
+
+.header{
+	height: 160px;
+	position: relative;
+	.menu{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding-left: 12px;
+		color:#fff;
+		font-family: '微软雅黑';
+		font-size: 16px;
+		.singleLineHeight(55px);
+		a{
+			display: inline-block;
+			padding:0 10px;
+			color:#fff;
+		}
+		.active{
+			color:#c32e18;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+// .resetProjectFont(@fontFamily, @fontSize, @fontColor);
+@fontFamily : "PT Sans", "Helvetica Neue", Helvetica, Arial, '宋体';
+@fontSize : 12px;
+@fontColor: #000;
+
+// .resetProjectLink(@linkColor, @hoverColor);
+@linkColor: #666;
+@hoverColor: #c32e18;
+
+// background
+@bg_body : "../project/qufu/image/bg_body.jpg";
+@bg_special : "../project/qufu/image/bg_special.jpg";
+@bg_weibo_attention :  "../project/qufu/image/bg_weibo_attention.jpg";
+.resetBrowser();
+.resetProjectFont(@fontFamily, @fontSize, @fontColor);
+.resetProjectLink(@linkColor, @hoverColor);
+//.resetForm(16px, 3px);
+.layoutGen(1000px, 10px, 80);
+.commonClassGen();
+.marginsGen(20);
+.paddingsGen(20);
+body{
+	background:#fff url(@bg_body) repeat-x 0 0;
+}

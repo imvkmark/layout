@@ -1,54 +1,103 @@
 // .layoutGen(960px, 30px, 10px, 20);
-.layoutGen(@projectWidth, @projectColumnWidth, @projectGutterWidth, @projectColumnNum){
-	.layout{
-		width: @projectWidth;
-		margin: 0 auto;
-		.spanX (@projectColumnNum);
-	}
-	// 生成 .span[1-xx]
-	.spanX (@index) when (@index > 0) {
-		(~".span@{index}") { .span(@index); }
-		.spanX(@index - 1);
-		
-	}
-	.spanX (0) {}
-	.span (@columns) {
-		width: (@projectColumnWidth * @columns) + (@projectGutterWidth * (@columns - 1));
-	}
+.layoutGen(@projectWidth, @projectColumnWidth, @projectColumnNum) {
+   .layout {
+	  width  : @projectWidth;
+	  margin : 0 auto;
+	  .spanX (@projectColumnNum);
+   }
+// 生成 .span[1-xx]
+   .spanX (@index) when (@index > 0) {
+	  (~".span@{index}") { .span(@index);
+	  }
+	  .spanX(@index - 1);
+
+   }
+   .spanX (0) {
+   }
+   .span (@columns) {
+	  width : (@projectColumnWidth * @columns) + 0;
+   }
 }
-.commonClassGen(){
-	.pull-right{
-		float:right;
-	}
-	.pull-left{
-		float:left;
-	}
-	.clear{
-		clear:both;
-		height:0;
-		font-size:0;
-	}
-	.hideme{
-		visibility:hidden;
-	}
+
+.commonClassGen() {
+   .fr {
+	  float : right;
+   }
+   .fl {
+	  float : left;
+   }
+   .clearfix, .clear, .fc {
+	  *zoom : 1;
+	  &:before,
+	  &:after {
+		 display     : table;
+		 content     : ""; // Fixes Opera/contenteditable bug:
+	  // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+		 line-height : 0;
+	  }
+	  &:after {
+		 clear : both;
+	  }
+   }
+   .hideme {
+	  visibility : hidden;
+   }
 }
-.marginsGen(@index){
-	// 生成 .mt[1-@index]
-	.marginX (@index) when (@index > 0) {
-		(~".mt@{index}") { .mt(@index); }
-		(~".mb@{index}") { .mb(@index); }
-		(~".ml@{index}") { .ml(@index); }
-		(~".mr@{index}") { .mr(@index); }
-		.marginX(@index - 1);
-		
+
+.marginsGen(@index) { // 生成 .mt[1-@index]
+   .marginX (@index) when (@index > 0) {
+	  (~".mt@{index}") { .mt(@index);
+	  }
+	  (~".mb@{index}") { .mb(@index);
+	  }
+	  (~".ml@{index}") { .ml(@index);
+	  }
+	  (~".mr@{index}") { .mr(@index);
+	  }
+	  .marginX(@index - 1);
+   }
+   .marginX (0) {
+   }
+   .mt (@index) {
+	  margin-top : @index+0px;
+   }
+   .mr (@index) {
+	  margin-right : @index+0px;
+   }
+   .mb (@index) {
+	  margin-bottom : @index+0px;
+   }
+   .ml (@index) {
+	  margin-left : @index+0px;
+   }
+   .marginX(@index);
+}
+
+.paddingsGen(@index) { // 生成 .mt[1-@index]
+	.paddingX (@index) when (@index > 0) {
+		(~".pt@{index}") { .pt(@index);
+		}
+		(~".pb@{index}") { .pb(@index);
+		}
+		(~".pl@{index}") { .pl(@index);
+		}
+		(~".pr@{index}") { .pr(@index);
+		}
+		.paddingX(@index - 1);
 	}
-
-	.marginX (0) {}
-	.mt (@index) {margin-top: @index+0px;}
-	.mr (@index) {margin-right: @index+0px;}
-	.mb (@index) {margin-bottom: @index+0px;}
-	.ml (@index) {margin-left: @index+0px;}
-
-	.marginX(@index);
-
+	.paddingX (0) {
+	}
+	.pt (@index) {
+		padding-top : @index+0px;
+	}
+	.pr (@index) {
+		padding-right : @index+0px;
+	}
+	.pb (@index) {
+		padding-bottom : @index+0px;
+	}
+	.pl (@index) {
+		padding-left : @index+0px;
+	}
+	.paddingX(@index);
 }
