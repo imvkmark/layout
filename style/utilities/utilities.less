@@ -1,4 +1,20 @@
+// 单行
 .singleLineHeight(@height) {
-	height: @height;
-	line-height: @height;
+	height: @height+0px;
+	line-height: @height+0px;
+}
+
+// 最小高度
+.minHeight(@height) {
+	min-height: @height+0px;
+	height: auto !important;
+	height: @height+0px;
+}
+
+// alpha
+.alpha(@alpha){
+	filter:~'alpha(opacity='@alpha * 100 ~')';       /* IE */
+	-moz-opacity:@alpha;              /* Moz + FF */
+	-webkit-opacity:@alpha;
+	opacity: @alpha;           /* 支持CSS3的浏览器（FF 1.5也支持）*/
 }

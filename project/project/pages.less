@@ -1,0 +1,20 @@
+@page_linkColor: #0332ca;
+@page_activeColor: #cccccc;
+.pages{
+	text-align:right;
+	padding:10px 20px;
+	a, span{
+		display:inline-block;
+		padding:3px 6px;
+		border:1px #ccc solid;
+	}
+	a{
+		color:@page_linkColor;
+		&:hover{
+			color:darken(@page_linkColor,20%);
+		}
+	}
+	.active{
+		color:@page_activeColor;
+	}
+}
