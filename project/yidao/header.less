@@ -1,0 +1,49 @@
+.header{
+	height: 260px;
+	background:@bgColor url(@bgHeader) no-repeat center top;
+	.i_top{
+		height: 20px;
+	}
+	.i_logo{
+		position: relative;
+		height: 115px;
+		width: 257px;
+		a{
+			display: block;
+			height: 115px;
+		}
+	}
+	.i_menu{
+		padding-top:80px;
+		li{
+			float:left;
+			line-height: 40px;
+			font-size: 14px;
+			a{
+				display: inline-block;
+				color:#000;
+				text-align: center;
+				margin:0 30px;
+				&:hover{
+					color:@hoverColor;
+				}
+			}
+		}
+		.active{
+			a{
+				display: inline-block;
+				margin-right: 0;
+				width: 166px;
+				height: 40px;
+				color:#fff;
+				background:transparent url(@bgMenuActive) no-repeat center top;
+
+			}
+		}
+		a{
+			color:#000;
+			font-weight: bold;
+		}
+
+	}
+}

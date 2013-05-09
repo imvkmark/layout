@@ -1,0 +1,97 @@
+.article{
+	position: relative;
+
+	.i_date{
+		display: block;
+		width: 64px;
+		height: 60px;
+		background: transparent url(@bgDate) no-repeat 0 0;
+		position: absolute;
+		.day{
+			font-family: "Droid Serif", serif;
+			display: block;
+			.singleLineHeight(35);
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.ym{
+			text-align: center;
+			display: block;
+			height: 25px;
+			line-height: 20px;
+		}
+	}
+	.i_content{
+		border:#d0ccc1 1px solid;
+		padding:10px;
+		border-bottom: 0;
+		margin-left: 80px;
+		background: transparent url(@bgContent) repeat;
+		.info {
+			color:#666;
+			margin:10px auto 5px;
+		}
+		.reply{
+			background: transparent url(@bgComment) no-repeat 0 0;
+			display: inline-block;
+			width: 49px;
+			height: 30px;
+			line-height: 32px;
+			padding-right: 94px;
+			text-align: right;
+			position: absolute;
+			top: 20px;
+			right: 10px;
+			font-size: 15px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.cutter{
+			height: 12px;
+			background: transparent url(@bgCutter) repeat-x center center;
+		}
+		.intro{
+			text-indent: 2em;
+			margin:0;
+			line-height: 1.5em;
+		}
+		.more{
+			text-align: right;
+			padding-right: 10px;
+		}
+	}
+	.pages{
+		border:#d0ccc1 1px solid;
+		border-bottom: 0;
+		margin-left: 80px;
+		line-height: 40px;
+		.pagesW{
+			background: transparent url(@bgContent) repeat;
+			width: 100%;
+			height: 40px;
+			.alpha(0.6);
+		}
+		.pagesP{
+			width: 100%;
+			height: 40px;
+			position: relative;
+			margin-top: -40px;
+			text-align: center;
+		}
+		a{
+			display: inline-block;
+			padding:0 5px;
+			line-height: 25px;
+			border:1px solid @linkColor;
+			&:hover{
+				border:1px solid @hoverColor;
+			}
+		}
+		.active{
+			border:1px solid @hoverColor;
+			color:@hoverColor;
+		}
+	}
+
+}
