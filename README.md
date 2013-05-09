@@ -15,7 +15,7 @@
 
 语法说明
 -
-	?frame=default&block=block:index
+	?project=qufu&frame=default&block=block:index
 		加载变量的地址
 	{replace 'block'}
 		这里的block则是文件中的替换文档.
@@ -27,3 +27,9 @@
 目的
 -
 将文件做成公共调用的模块化,便于前端的调试使用, 使用less文件做架构
+
+命名
+-
+	header      页头
+	footer      页脚
+		copyright   版权
