@@ -47,3 +47,45 @@
 
 	}
 }
+
+.side{
+	.i_search{
+		position: relative;
+		background:transparent url(@bgSideSearch) no-repeat center top;
+		height: 48px;
+		.search_input{
+			border: none;
+			height: 23px;
+			width: 187px;
+			position: absolute;
+			top: 11px;
+			left: 40px;
+			background: #f4f4f4;
+		}
+		.search_btn{
+			border:none;
+			display: inline-block;
+			width: 71px;
+			height: 45px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+			&:hover{
+				background:transparent url(@bgSideSearchBtn) no-repeat 4px top;
+			}
+		}
+	}
+	.i_side{
+		background:transparent url(@bgSide) no-repeat 4px top;
+	}
+	.sideCat{
+		margin-top: 30px;
+		line-height: 28px;
+		a{
+			white-space: nowrap;
+			width: 80px;
+			display: inline-block;
+		}
+	}
+}

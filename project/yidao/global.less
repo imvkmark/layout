@@ -17,6 +17,11 @@
 @bgContent  : "../project/yidao/image/bg_content.jpg";
 @bgComment  : "../project/yidao/image/bg_comment.jpg";
 @bgCutter  : "../project/yidao/image/bg_cutter.jpg";
+@bgSideSearch  : "../project/yidao/image/bg_search.jpg";
+@bgSideSearchBtn  : "../project/yidao/image/bg_search_btn.jpg";
+@bgSide  : "../project/yidao/image/bg_side.jpg";
+@bgTag  : "../project/yidao/image/bg_tag.jpg";
+@bgCommentTitle  : "../project/yidao/image/bg_comment.gif";
 	.resetBrowser();
 	.resetProjectFont(@fontFamily, @fontSize, @fontColor);
 	.resetProjectLink(@linkColor, @hoverColor);
@@ -27,15 +32,30 @@
 	.paddingsGen(20);
 
 .col-left{
-	width: 720px;
+	width: 660px;
 	float: left;
 }
 
 .col-right{
-	width: 290px;
+	width: 320px;
 	float:right;
 }
-
+.col-side-left{
+	width:60px;
+	float: left;
+}
+.col-side-right{
+	width:250px;
+	float: right;
+}
+.col-comment-left{
+	width:360px;
+	float: left;
+}
+.col-comment-right{
+	width:150px;
+	float: right;
+}
 body {
 	background : @bgColor url(@bgBody) no-repeat center bottom;
 	.minHeight(1320);

@@ -60,6 +60,12 @@
 			text-align: right;
 			padding-right: 10px;
 		}
+		.tag{
+			background: transparent url(@bgTag) no-repeat 0 center;
+			height: 65px;
+			line-height: 68px;
+			padding-left: 127px;
+		}
 	}
 	.pages{
 		border:#d0ccc1 1px solid;
@@ -93,5 +99,22 @@
 			color:@hoverColor;
 		}
 	}
-
+	.comment{
+		.i_left{
+			padding-left:10px;
+		}
+		h3{
+			height: 25px;
+			background: transparent url(@bgCommentTitle) no-repeat 0 0;
+		}
+		.com_content{
+			background-position: 0 0;
+		}
+		.com_uname{
+			background-position: 0 -27px;
+		}
+		.com_email{
+			background-position: 0 -55px;
+		}
+	}
 }
